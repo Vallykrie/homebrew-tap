@@ -10,10 +10,23 @@ cask "the-notch" do
 
   livecheck do
     url :url
-    strategy :github_releases
+    # The default GithubReleases strategy drops prereleases and its regex stops at the
+    # numeric part, so every -beta tag reads as "no version found". Match the full tag
+    # and keep prereleases; only drafts are skipped.
+    regex(/^v?(\d+(?:\.\d+)*(?:-[0-9a-z.]+)?)$/i)
+    strategy :github_releases do |json, regex|
+      json.filter_map do |release|
+        next if release["draft"]
+
+        match = release["tag_name"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "The Notch.app"
 
