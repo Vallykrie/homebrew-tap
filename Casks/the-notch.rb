@@ -43,13 +43,12 @@ cask "the-notch" do
   caveats do
     <<~EOS
       This build is not yet notarised, so macOS will refuse the first launch.
-      Install it with --no-quarantine:
-
-        brew install --cask --no-quarantine vallykrie/tap/the-notch
-
-      or clear the flag after the fact:
+      Clear the quarantine flag once, then open it normally:
 
         xattr -dr com.apple.quarantine "/Applications/The Notch.app"
+
+      (Right-click the app and choose Open works too. Homebrew 6 has no
+      --no-quarantine flag; it always quarantines a cask.)
 
       The Notch has no Dock icon — it lives in the notch. Launch it from Spotlight
       or Launchpad the first time.
