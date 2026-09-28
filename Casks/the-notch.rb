@@ -2,8 +2,7 @@ cask "the-notch" do
   version "1.0.0-beta.3"
   sha256 "272a04b044a52095456b03664264631d9d15ed13e4a2399e3afd1cf0f06fc859"
 
-  url "https://github.com/Vallykrie/The-Notch/releases/download/v#{version}/The-Notch-#{version}.dmg",
-      verified: "github.com/Vallykrie/The-Notch/"
+  url "https://github.com/Vallykrie/The-Notch/releases/download/v#{version}/The-Notch-#{version}.dmg"
   name "The Notch"
   desc "Notch shell with a control surface for AI coding agents"
   homepage "https://github.com/Vallykrie/The-Notch"
