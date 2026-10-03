@@ -44,8 +44,11 @@ cask "the-notch" do
       The Notch has no Dock icon — it lives in the notch. Launch it from Spotlight
       or Launchpad the first time.
 
-      It needs Accessibility permission to jump back to the terminal window that an
-      agent is waiting in. macOS will prompt on first use.
+      macOS asks for two permissions, both optional:
+      - Accessibility, to replace the system volume and brightness indicators.
+      - Automation, the first time The Notch talks to another app: to show what
+        Spotify or Music is playing, and to jump back to the Terminal or iTerm
+        tab an agent is waiting in.
 
       Uninstalling leaves The Notch's hook entries in ~/.claude/settings.json and
       ~/.codex/hooks.json. They fail open, so your agents keep working, but you can
