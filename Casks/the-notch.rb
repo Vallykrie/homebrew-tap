@@ -1,6 +1,6 @@
 cask "the-notch" do
-  version "1.0.0-beta.4"
-  sha256 "301fcbc925db9f90f388d00b9995a2965dae9ebff2fdc54fce11331ff30db30b"
+  version "1.0.0-beta.7"
+  sha256 "f0755483ee2400a2bc1b0e76aa315768b5f6f8c3252c0002272632f492a43e91"
 
   url "https://github.com/Vallykrie/The-Notch/releases/download/v#{version}/The-Notch-#{version}.dmg"
   name "The Notch"
@@ -41,14 +41,6 @@ cask "the-notch" do
 
   caveats do
     <<~EOS
-      This build is not yet notarised, so macOS will refuse the first launch.
-      Clear the quarantine flag once, then open it normally:
-
-        xattr -dr com.apple.quarantine "/Applications/The Notch.app"
-
-      (Right-click the app and choose Open works too. Homebrew 6 has no
-      --no-quarantine flag; it always quarantines a cask.)
-
       The Notch has no Dock icon — it lives in the notch. Launch it from Spotlight
       or Launchpad the first time.
 
