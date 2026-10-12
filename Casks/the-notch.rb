@@ -1,6 +1,6 @@
 cask "the-notch" do
-  version "1.0.0-beta.13"
-  sha256 "d55bf4663d9ee88f1579aaca5993e3193f6e5266a331b29b980ba6328534a37c"
+  version "1.0.0-beta.14"
+  sha256 "e9faf15fa6312d2fabca3a0126bf343aa7baae459436d22efa940322ca8ce1b6"
 
   url "https://github.com/Vallykrie/The-Notch/releases/download/v#{version}/The-Notch-#{version}.dmg"
   name "The Notch"
